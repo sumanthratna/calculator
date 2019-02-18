@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mediocre calculator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+        <script src="calc.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Karla:700" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1><b>Scientific Calculator</b></h1>
+        <div ng-app="CalculatorApp" ng-controller="CalculatorController">
+            <p>Enter input:&nbsp;&nbsp;&nbsp;<input ng-model="expression"></p>
+            <p>Output: <span ng-cloak ng-bind="result()"></span></p>
+                                        <!--^this is important
+                                            calling functions in ng-bind is:
+                                            * allowed
+                                            * useful
+                                            * easier than adding a vanilla JS event handler (IMO)
+                                        -->
+        </div>
+    </body>
+</html>
